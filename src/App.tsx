@@ -25,8 +25,7 @@ const App: React.FC = () => {
   const [inutError, setInputError] = useState<boolean>(false);
 
   useEffect(() => {
-    // setItemId(itemId + 1);
-    if (newProduct !== " " && newProduct.length !== 0) setInputError(false);
+    if (newProduct.trim().length !== 0) setInputError(false);
   }, [items, newProduct, itemId]);
 
   const updatePeopleCount = (count: number) => {
